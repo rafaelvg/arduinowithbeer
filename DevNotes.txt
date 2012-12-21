@@ -1,0 +1,53 @@
+Autor: Rafael V. Gonçalves
+Inicio do projeto : 21/12/2012
+
+Descrição:  Criar uma aplicação em python utilizando o micro-framework flask e tendo como base de dados o MongoDB, esta aplicação deverar ser
+			capaz de fazer autenticação de usuarios que estarão utilizando uma app para iPhone e conversar com uma placa controlodara Arduino
+			que será responsável pela liberação de Chopes.
+
+Ambiente de desenvolvimento
+	- Sistema operacional Mac OS 10.8.2
+	- Sublime text 2 como IDE
+	- Python 2.7.2
+	- Flask 0.9
+	- Virtualenv 1.8.4
+	- flask-script
+	- WTForms
+	- MongoEngine
+	- flask_mongo engine
+
+Configuração
+	// Instalação do virtualenv, que funciona como uma maquina virtual deixando assim meu ambiente de trabalho limpo
+	pip install virtualenv
+	
+	// Crio o diretório do meu projeto
+	mkdir arduinowithbeer
+    cd arduinowithbeer
+
+	// Crio um ambiente isolado para o meu projeto
+	virtualenv arduinowithbeer
+
+	// Ativo meu ambiente (startup)
+	source arduinowithbeer/bin/active
+
+	//Instalação dos pacotes necessários para minha aplicação rodar
+	pip install flask                // instalando o microframework flask
+	pip install flask-script         // instalando os modulos flask-script
+	pip install WTForms              // modulo para formulários
+	pip install mongoengine          // instalando o mongodb
+	pip install flask_mongoengine    // responsável pela integração entre o MongoEngine, Flask e o WTForms
+
+
+Estrutura do projeto
+
+/arduinowithbeer  // Pasta para colocar arquivos referente ao projeto.
+	/arduinowithbeer // Virtualenv instancia 
+		/arduinowithbeer // Pasta da aplicação em flask
+			/static
+				/arquivos.css
+			//templates 
+				/arquivos.html
+			/__init__.py
+			/manage.py
+			/models.py
+			/views.py
